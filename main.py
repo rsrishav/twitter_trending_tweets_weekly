@@ -103,7 +103,7 @@ def kaggle_dataset_download(api, dataset_name, path):
 
 def kaggle_upload_dataset(api, path):
     kag_api.dataset_create_version(api, path, f"Dataset updated till (UTC): {datetime.utcnow()}",
-                                   convert_to_csv=True, delete_old_versions=True)
+                                   convert_to_csv=True, delete_old_versions=False)
     print("[INFO] Dataset uploaded.")
     clear_dir(path)
 
