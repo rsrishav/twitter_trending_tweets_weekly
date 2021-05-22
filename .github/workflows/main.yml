@@ -23,5 +23,9 @@ jobs:
       env:
         KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
         KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+        CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+        CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+        OAUTH_TOKEN: ${{ secrets.OAUTH_TOKEN }}
+        OAUTH_TOKEN_SECRET: ${{ secrets.OAUTH_TOKEN_SECRET }}
       run: |
         python main.py
