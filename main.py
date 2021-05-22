@@ -68,31 +68,6 @@ def get_trends(api):
         time.sleep(1)
     return country_wise_trends
 
-# all_count = 0
-# backoff_counter = 1
-
-# while True:
-#     for country in all_countries:
-#         time.sleep(3)
-#         count = 0
-#         print("\n\n" + country["country"] + "===================")
-#         # trends = api.trends_place(country["woeid"])
-#         trends = twitter_api.trends.place(_id=country["woeid"])
-#         # except tweepy.TweepError as e:
-#         #     print(e.reason)
-#         #     time.sleep(backoff_counter)
-#         #     backoff_counter += 1
-#         #     trends = api.trends_place(country["woeid"])
-#
-#         trend_hashtags = [trend for trend in trends[0]["trends"] if trend["name"][0] == "#"]
-#         top_10 = trend_hashtags[:10] if len(trend_hashtags) > 10 else trend_hashtags
-#         for t in top_10:
-#             count += 1
-#             print(f"{count}: {t}")
-#         all_count += count
-#     print(all_count)
-#     break
-
 
 def get_tweets(api, country_wise_trends):
     tweet_data = list()
