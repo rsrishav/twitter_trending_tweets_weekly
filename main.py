@@ -118,9 +118,13 @@ def kaggle_upload_dataset(api, path):
 
 
 if __name__ == '__main__':
-    t_api = twitter_authenticate()
-    top_10, hashtag_trends, all_trends = get_trends(t_api)
-
+    try:
+        t_api = twitter_authenticate()
+        top_10, hashtag_trends, all_trends = get_trends(t_api)
+    except Exception as e:
+        print("\n****************************")
+        print("[ERROR] ", str(e))
+        return
     all_trends_data = generate_trends_data(all_trends)
     hashtag_trends_data = generate_trends_data(hashtag_trends)
     all_trends_df = convert_to_df(all_trends_data, TREND_COLUMNS)
