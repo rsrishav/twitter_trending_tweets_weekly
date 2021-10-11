@@ -1,7 +1,7 @@
 name: Update_Dataset
 on:
   schedule:
-  - cron: '0 12 * * 6'
+  - cron: '0 21 * * *'
 
 jobs:
   job1:
