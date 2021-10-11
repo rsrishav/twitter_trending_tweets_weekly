@@ -124,7 +124,7 @@ if __name__ == '__main__':
     except Exception as e:
         print("\n****************************")
         print("[ERROR] ", str(e))
-        return
+        exit(0)
     all_trends_data = generate_trends_data(all_trends)
     hashtag_trends_data = generate_trends_data(hashtag_trends)
     all_trends_df = convert_to_df(all_trends_data, TREND_COLUMNS)
